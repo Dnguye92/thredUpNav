@@ -1,0 +1,90 @@
+body {
+  font-family: proxima-nova-1, proxima-nova-2, sans-serif;
+  margin: 0;
+  h1 {
+    color: #8fd0b3;
+  }
+  a {
+    color: #585858;
+    text-decoration: none;
+  }
+  #root {
+    border-bottom: 2px solid #B19C6C;
+    border-top: 2px solid #B19C6C;
+    @media only screen and (max-width: 900px) {
+      border: none;
+    }
+    img {
+      padding-top: 16px;
+      padding-left: 16px;
+      width: 100px;
+      @media only screen and (min-width: 900px) {
+        display: none;
+      }
+    }
+    div.navbar {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      @media only screen and (max-width: 900px) {
+        background: white;
+        bottom: 0;
+        -moz-box-shadow:    -3px 3px 5px 4px #ccc;
+        -webkit-box-shadow: -3px 3px 5px 4px #ccc;
+        box-shadow:         -3px 3px 5px 4px #ccc;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10px;
+        position: absolute;
+        top: 0;
+        transform: translateX(-110%);
+        transition: transform 0.5s ease;
+        width: 250px;
+        &.menuOpen {
+          transform: translateX(0%);
+        }
+      }
+      ul {
+        margin: 8px 0;
+        padding-left: 0;
+        &.rightNav {
+          flex: 2 1 30%;
+          text-align: right;
+          @media only screen and (max-width: 900px) {
+            text-align: unset;
+          }
+        }
+        li {
+          display: inline-block;
+          font-size: 14px;
+          font-weight: bold;
+          padding: 8px;
+          @media only screen and (max-width: 900px) {
+            display: block;
+            padding-left: 16px;
+          }
+          &.sell {
+            a {
+              color: #97D5B9;
+            }
+          }
+          a {
+            &:hover {
+              border-bottom: 3px solid #585858;
+              padding-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+    .feather-menu {
+      float: right;
+      padding-right: 16px;
+      padding-top: 16px;
+      stroke: black;
+      @media only screen and (min-width: 900px) {
+        display: none;
+      }
+    }
+  }
+}
